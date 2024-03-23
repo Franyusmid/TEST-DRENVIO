@@ -13,6 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 dotenv.config();
+const port = process.env.BASE_URL_PORT || 3005;
 
 // 3. RUTAS
 
