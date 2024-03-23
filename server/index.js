@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 
 //B.ARCHIVOS
 import userRoute from "./routes/users.js";
+import productsRoute from "./routes/products.js";
 
 //2. INICIALIZADORES
 
@@ -18,9 +19,8 @@ const port = process.env.BASE_URL_PORT || 3005;
 // 3. RUTAS
 
 app.use("/api/v1/users", userRoute);
+app.use("/api/v1/products", productsRoute);
 
 // 4.LEVANTAMIENTO DEL SERVIDOR
 
-app.listen(process.env.BASE_URL_PORT, () =>
-  console.log("El servidor esta activo")
-);
+app.listen(port, () => console.log("El servidor esta activo"));
