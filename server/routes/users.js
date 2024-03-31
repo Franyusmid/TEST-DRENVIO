@@ -5,7 +5,7 @@
 import express from "express";
 
 //B.ARICHIVOS
-import usersController from "./../controllers/useController.js";
+import userController from "../controllers/userController.js";
 
 //2 INICIALIZADORES
 
@@ -13,7 +13,7 @@ const router = express.Router();
 
 //3.CONTROLADORES
 
-router.get("/", usersController.readAll);
+router.post("/create", userController.create);
 
 //4.EXPORTACIONES
 export default router;
